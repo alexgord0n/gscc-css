@@ -1,0 +1,9 @@
+.twig_site-index .widget-container.widget-container--hero_banner div.forum-featured-image, .twig_page-custom-page-overview .forum-featured-image  {
+  height: 350px;
+}
+
+.main-navigation-sitewidth.main-navigation-sitewidth-max-content {
+  padding: 16px 48px;
+  margin: 0 auto;
+  max-width: 1680px;
+}  
