@@ -1,3 +1,4 @@
+<!-- CUSTOM CSS CHANGES --> 
 <style>
  .sso-button {
  background-color: orange;
@@ -22,10 +23,14 @@
  }
 </style>
 
-<div id="alex">
-<a href="https://dev-76099702.okta.com/home/dev-76099702_community_1/0oahjwb40wmS3rwGh5d7/alnhjwo71c0SvUPqc5d7" class="sso-button">Login with Okta</a></div>
+<!-- Custom Header with Okta Login -->
 
-<!-- Custom CSS -->
+<div id="alex">
+  <a href="https://dev-76099702.okta.com/home/dev-76099702_community_1/0oahjwb40wmS3rwGh5d7/alnhjwo71c0SvUPqc5d7" class="sso-button">Login with Okta</a>
+</div>
+
+<!-- STANDARD CSS -->
+
 <style>
   .twig_site-index .widget-container.widget-container--hero_banner div.forum-featured-image,
   .twig_site-index .generic_hero.qa-generic_hero-container,
@@ -39,3 +44,12 @@
     max-width: 1680px;
   }  
 </style>
+
+
+<!-- JAVASCRIPT --> 
+
+<script>  
+if (inSidedData.user.role.includes('Employee')) { 
+    $('.title-ideas').css("display", "none");
+}
+</script>
