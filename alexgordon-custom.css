@@ -1,0 +1,12 @@
+<!-- CUSTOM CSS -->
+
+.twig_site-index .generic_hero.qa-generic_hero-container {
+  height: 550px;
+  background-color: black;
+}
+
+.main-navigation-sitewidth.main-navigation-sitewidth-max-content {
+  padding: 16px 48px;
+  margin: 0 auto;
+  max-width: 1680px;
+}  
