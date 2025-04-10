@@ -1,7 +1,6 @@
 <!-- CUSTOM CSS -->
 
 .twig_site-index .generic_hero.qa-generic_hero-container,
-.twig_site-index .brand-hero.qa-brand-hero.custom-hero-banner,
 .twig_site-index .brand-hero.qa-brand-hero.custom-hero-banner {
   height: 550px !important;
 }
