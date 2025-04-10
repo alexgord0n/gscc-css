@@ -1,1 +1,67 @@
 <div style="text-align: center; padding: 20px;">DISCLAIMER: This is some text and some disclaimer thing.</div>
+<script>  
+if (inSidedData.user.role.includes('Employee')) { 
+    $('.title-ideas').css("display", "none");
+}
+</script>
+
+
+<!-- Redirect banned user -->
+<script>
+  if (inSidedData.user.role.includes('Beta tester')) { 
+    const currentUrl = window.location.href;
+    const targetUrl = "https://alexgordon-en-community.insided.com/p/test?";
+
+    if (!currentUrl.startsWith(targetUrl)) {
+      window.location.href = targetUrl;
+    }
+  }
+</script>
+
+<!-- Change login to Okta button -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Select the login button with href="#"
+    var loginButton = document.querySelector('.header-login-button.qa-header-login-button[href="#"]');
+
+    if (loginButton) {
+        // Hide the original button
+        loginButton.style.display = "none";
+
+        // Clone the button
+        var newButton = loginButton.cloneNode(true); // Clone without event listeners
+        newButton.setAttribute("href", "https://dev-76099702.okta.com/home/dev-76099702_community_1/0oahjwb40wmS3rwGh5d7/alnhjwo71c0SvUPqc5d7");
+
+        // Clear existing content to avoid duplication
+        newButton.innerHTML = "";
+
+        // Create the icon span (same as original)
+        var iconSpan = document.createElement("span");
+        iconSpan.className = "header-navigation-button-icon";
+        iconSpan.innerHTML = `
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="currentColor"></path>
+            </svg>
+        `;
+
+        // Create the text span
+        var textSpan = document.createElement("span");
+        textSpan.textContent = "Login";
+
+        // Apply necessary styling to center the elements
+        newButton.style.display = "flex";
+        newButton.style.alignItems = "center";
+        newButton.style.justifyContent = "center";
+        newButton.style.gap = "8px"; // Adds space between icon and text
+        newButton.style.padding = "5px 10px"; // Keeps button sizing consistent
+
+        // Append the icon and text inside the new button
+        newButton.appendChild(iconSpan);
+        newButton.appendChild(textSpan);
+
+        // Insert the new button after the original (now hidden)
+        loginButton.parentNode.insertBefore(newButton, loginButton.nextSibling);
+    }
+});
+
+</script>
