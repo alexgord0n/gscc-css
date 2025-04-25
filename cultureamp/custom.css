@@ -7,3 +7,7 @@
 [data-entity="HomePage"] .brand-hero.qa-brand-hero.custom-hero-banner {
   height: 400px !important;
 }
+
+h1 {
+  font-size: 60px;
+}
