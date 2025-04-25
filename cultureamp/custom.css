@@ -28,3 +28,121 @@ h1 {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
+
+
+/* Test */
+<!-- Culture Amp Community UI Enhancements -->
+<style>
+  /* 1. Quicklink cards – lift, glow & subtle 3D tilt */
+  .quicklink__box {
+    perspective: 1000px; /* gives subtle depth to child */
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.35s ease;
+    will-change: transform, box-shadow;
+  }
+  .quicklink__box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at 30% 15%, rgba(255,64,129,0.25), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+  .quicklink__box:hover,
+  .quicklink__box:focus-within {
+    transform: translateY(-8px) rotateX(3deg);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+  }
+  .quicklink__box:hover::after,
+  .quicklink__box:focus-within::after {
+    opacity: 1;
+  }
+
+  /* 2. Icon zoom‑in on hover */
+  .quicklink__hero {
+    transition: transform 0.5s ease;
+  }
+  .quicklink__box:hover .quicklink__hero,
+  .quicklink__box:focus-within .quicklink__hero {
+    transform: scale(1.1);
+  }
+
+  /* 3. CTA button – friendly pulse */
+  .cai-btn {
+    position: relative;
+    background: #ff4081;
+    color: #fff;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .cai-btn:hover,
+  .cai-btn:focus-visible {
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  }
+
+  /* 4. Welcome banner – gentle wave animation */
+  .welcome-banner {
+    background: linear-gradient(90deg,#ff4081,#ffc107,#ff4081);
+    background-size: 300% 100%;
+    color:#fff;
+    padding:1rem;
+    text-align:center;
+    font-size:1.15rem;
+    animation: banner-wave 8s ease-in-out infinite;
+  }
+  @keyframes banner-wave {
+    0%{background-position:0% 0%}
+    50%{background-position:100% 0%}
+    100%{background-position:0% 0%}
+  }
+
+  /* 5. Fade‑in on section scroll (intersection observer adds .cai-inview) */
+  .cai-fade {
+    opacity:0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .cai-inview {
+    opacity:1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  /* ========= JS Enhancements ========= */
+  // 1. Intersection Observer to reveal sections on scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('cai-inview');
+        io.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.15});
+  document.querySelectorAll('.cai-fade').forEach(el=>io.observe(el));
+
+  // 2. Lightweight confetti on first post or group join buttons (optional)
+  // Add class 'cai-celebrate' to any actionable element
+  import('https://cdn.skypack.dev/canvas-confetti').then(module=>{
+    const confetti = module.default;
+    document.addEventListener('click',e=>{
+      const btn=e.target.closest('.cai-celebrate');
+      if(!btn) return;
+      confetti({
+        particleCount: 100,
+        spread: 60,
+        origin: { y: 0.7 }
+      });
+    });
+  }).catch(()=>{/* ignore if offline */});
+</script>
+
+<!-- Usage hints (remove before production):
+     • Add class "cai-fade" to any section you want to animate on scroll.
+     • Add class "cai-btn" to buttons & links for the pulse effect.
+     • Add class "cai-celebrate" to elements that should trigger confetti on click. -->
