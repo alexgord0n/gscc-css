@@ -11,3 +11,20 @@
 h1 {
   font-size: 60px;
 }
+
+/* Style for the cards on hover */
+.quicklink__box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform, box-shadow;
+}
+
+.quicklink__box:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: make the transition even smoother when focusing with keyboard too */
+.quicklink__box:focus-within {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
