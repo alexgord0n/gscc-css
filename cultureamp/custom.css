@@ -1,13 +1,9 @@
-<!-- CUSTOM CSS -->
-
-.twig_site-index .generic_hero.qa-generic_hero-container,
-.twig_site-index .brand-hero.qa-brand-hero.custom-hero-banner,
-[data-entity="HomePage"] .brand-hero.qa-brand-hero.custom-hero-banner {
-  height: 550px !important;
-}
-
 .main-navigation-sitewidth.main-navigation-sitewidth-max-content {
   padding: 16px 48px;
   margin: 0 auto;
   max-width: 1680px;
 }  
+
+[data-entity="HomePage"] .brand-hero.qa-brand-hero.custom-hero-banner {
+  height: 550px !important;
+}
