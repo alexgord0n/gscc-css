@@ -31,11 +31,10 @@ h1 {
 
 
 /* Test */
-<!-- Culture Amp Community UI Enhancements -->
-<style>
+<!-- Culture Amp Community UI Enhancements (CSS only) -->
   /* 1. Quicklink cards – lift, glow & subtle 3D tilt */
   .quicklink__box {
-    perspective: 1000px; /* gives subtle depth to child */
+    perspective: 1000px;
     transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
                 box-shadow 0.35s ease;
     will-change: transform, box-shadow;
@@ -60,7 +59,7 @@ h1 {
     opacity: 1;
   }
 
-  /* 2. Icon zoom‑in on hover */
+  /* 2. Icon zoom-in on hover */
   .quicklink__hero {
     transition: transform 0.5s ease;
   }
@@ -101,7 +100,7 @@ h1 {
     100%{background-position:0% 0%}
   }
 
-  /* 5. Fade‑in on section scroll (intersection observer adds .cai-inview) */
+  /* 5. Fade-in on section scroll (requires JS to add .cai-inview) */
   .cai-fade {
     opacity:0;
     transform: translateY(20px);
@@ -111,38 +110,7 @@ h1 {
     opacity:1;
     transform: translateY(0);
   }
-</style>
 
-<script>
-  /* ========= JS Enhancements ========= */
-  // 1. Intersection Observer to reveal sections on scroll
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        entry.target.classList.add('cai-inview');
-        io.unobserve(entry.target);
-      }
-    });
-  },{threshold:0.15});
-  document.querySelectorAll('.cai-fade').forEach(el=>io.observe(el));
-
-  // 2. Lightweight confetti on first post or group join buttons (optional)
-  // Add class 'cai-celebrate' to any actionable element
-  import('https://cdn.skypack.dev/canvas-confetti').then(module=>{
-    const confetti = module.default;
-    document.addEventListener('click',e=>{
-      const btn=e.target.closest('.cai-celebrate');
-      if(!btn) return;
-      confetti({
-        particleCount: 100,
-        spread: 60,
-        origin: { y: 0.7 }
-      });
-    });
-  }).catch(()=>{/* ignore if offline */});
-</script>
-
-<!-- Usage hints (remove before production):
-     • Add class "cai-fade" to any section you want to animate on scroll.
-     • Add class "cai-btn" to buttons & links for the pulse effect.
-     • Add class "cai-celebrate" to elements that should trigger confetti on click. -->
+<!-- Usage hints:
+     1. Paste this <style> block in your theme’s Global › Custom CSS section.
+     2. Add the matching JS enhancements from the separate file if your community allows JS. -->
