@@ -1,3 +1,4 @@
+
 /* ============================================
    Custom Theme Overrides for Gainsight Community
    ============================================ */
@@ -17,12 +18,12 @@
 .cke_panel_listItem a:hover,
 .cke_panel_listItem a:focus,
 .cke_panel_listItem a:active {
-  color: var(--color-black) !important;
+  color: var(--config-body-background-color) !important;
 }
 
 /* ---------- Search Result Titles ---------- */
 .algolia-search-results-section__title-label {
-  color: var(--color-white) !important;
+  color: var(--config-body-background-color) !important;
 }
 
 /* ---------- Background Tweaks for Dark Theme ---------- */
@@ -93,7 +94,7 @@
 #topic_title,
 .dropdown-selector__header,
 .dropdown-selector__item-wrapper--expanded {
-  background-color: var(--color-dark-gray) !important;
+  background-color: var(--config-body-background-color) !important;
 }
 
 /* ---------- Transparent Backgrounds ---------- */
@@ -109,14 +110,14 @@
 .cke_reset_all *,
 .cke_reset_all a,
 .cke_reset_all textarea {
-  color: var(--color-black) !important;
+  color: var(--config-body-background-color) !important;
 }
 
 /* ---------- Dropdown Styling ---------- */
 .dropdown {
   position: absolute;
   z-index: 1026;
-  background: var(--color-black);
+  background: var(--config-body-background-color);
   border: 0px solid var(--config--main-border-base-color);
   -webkit-box-shadow: 1px 2px 2px hsla(0, 0%, 39.2%, .2);
   box-shadow: 1px 2px 2px hsla(0, 0%, 39.2%, .2);
@@ -125,8 +126,8 @@
 
 /* ---------- Chips ---------- */
 .chip {
-  border: 0.2px solid var(--color-border-gray);
-  color: var(--color-white);
+  border: 0.2px solid var(--config-body-background-color);
+  color: var(--config-body-background-color);
 }
 
 /* ---------- Avatar Styling (including overlay logo) ---------- */
@@ -138,7 +139,7 @@
 
 .avatar .profilepicture {
   border-radius: 50%;
-  background-color: var(--color-white);
+  background-color: var(--config-body-background-color);
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -154,12 +155,12 @@
   width: 40%;
   height: 40%;
   border-radius: 50%;
-  background-color: var(--color-white);
+  background-color: var(--config-body-background-color);
   background-image: url('https://i.ibb.co/Nd5FjWg6/images-removebg-preview.png');
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
-  border: 0.5px solid var(--color-black);
+  border: 0.5px solid var(--config-body-background-color);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
@@ -169,7 +170,7 @@
 .dropdown-links,
 .button-control-new--secondary,
 td.cke_dialog_footer a.cke_dialog_ui_button span.cke_dialog_ui_button {
-  color: var(--color-white) !important;
+  color: var(--config-body-background-color) !important;
 }
 
 .dropdown-selector__item:hover {
