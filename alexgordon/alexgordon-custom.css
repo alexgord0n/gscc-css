@@ -10,3 +10,8 @@
   margin: 0 auto;
   max-width: 1680px;
 }  
+
+article.featured-topic.quicklink__box.card-widget-wrapper.quicklink-icon:hover {
+    transform: translateY(-8px);
+  	transition: transform 0.3s ease;
+}
