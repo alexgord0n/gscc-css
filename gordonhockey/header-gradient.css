@@ -1,0 +1,15 @@
+/* Header */
+/* Hide main background */
+section.main-navigation--nav-buttons-wrapper {
+    background: none;
+}
+
+/* Hide fade on left of notfication */
+.header-navigation .header-navigation-items_menu::after {
+  display: none !important;
+}
+
+/* Gradient of nav area */
+section.main-navigation--wrapper.header-navigation {
+    background-image: linear-gradient(to right, #006D75, #EA7200);
+}
