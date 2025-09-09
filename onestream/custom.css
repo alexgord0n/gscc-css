@@ -11,7 +11,7 @@ body[data-entity="HomePage"] .forum-featured-image {
 }  
 
 /* Animations */
-article.featured-topic.quicklink__box.card-widget-wrapper.quicklink-icon:hover.
+article.featured-topic.quicklink__box.card-widget-wrapper.quicklink-icon:hover,
 article.featured-topic.featured-topic--featured-image:hover {
     transform: translateY(-8px);
   	transition: transform 0.3s ease;
