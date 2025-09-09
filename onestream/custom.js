@@ -1,5 +1,5 @@
-/* Hide Menu Items */
-<script>
+// Hide Menu Items
+
   if (inSidedData.user.role.includes('roles.guest')) {
     const hideClasses = ['title-ideastream', 'title-partners', 'title-internal'];
 
@@ -9,4 +9,3 @@
       }
     });
   }
-</script>
