@@ -10,11 +10,11 @@ body[data-entity="HomePage"] .forum-featured-image {
   max-width: 1680px;
 }  
 
-/* Animations
+/* Animations */
 body[data-entity="HomePage"] article.featured-topic.quicklink__box.card-widget-wrapper.quicklink-icon:hover {
     transform: translateY(-8px);
   	transition: transform 0.3s ease;
-} */
+}
 
 /* HTML Widget */
 .custom-html-widget-wrapper {
