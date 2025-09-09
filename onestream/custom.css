@@ -20,3 +20,10 @@ body[data-entity="HomePage"] article.featured-topic.quicklink__box.card-widget-w
 .custom-html-widget-wrapper {
   margin: 0;
 }
+
+
+/* hover */
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+}
