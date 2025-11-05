@@ -16,8 +16,3 @@ body[data-entity="HomePage"] article.featured-topic.quicklink__box.card-widget-w
     transform: translateY(-8px);
   	transition: transform 0.3s ease;
 }
-
-/* HTML Widget */
-.custom-html-widget-wrapper {
-  margin: 0;
-}
