@@ -6,7 +6,7 @@ body[data-entity="HomePage"] .brand-hero.qa-brand-hero.custom-hero-banner {
 
 /* Full Width Nav adjustments */
 .main-navigation-sitewidth.main-navigation-sitewidth-max-content {
-  padding: 20px 40px;
+  padding: 10px 40px;
   margin: 0 auto;
   max-width: 1680px;
 }  
