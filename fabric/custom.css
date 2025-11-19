@@ -1,0 +1,21 @@
+<style>
+/* Z-index Fix for Algolia Search */
+/* Raise the search overlay + results above sticky header & nav */
+:root,
+.search-revamp,
+.searchbox {
+  --base-elevation: 9000;                 /* optional: lifts the whole search stack */
+  --elevation-overlay: 9001;              /* gray backdrop */
+  --elevation-search-results: 9002;       /* results panel */
+  --elevation-search-box: 8999;           /* input field */
+  --elevation-search-box-open: var(--elevation-search-results);
+}
+
+/* Hard overrides in case something else wins specificity */
+.algolia-search--opacity { z-index: var(--elevation-overlay) !important; }
+
+.instant-search__results-wrapper,
+.instant-search__results-wrapper-filter {
+  z-index: var(--elevation-search-results) !important;
+}
+</style>
