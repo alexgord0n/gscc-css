@@ -1,4 +1,3 @@
-<style>
 /* Z-index Fix for Algolia Search */
 /* Raise the search overlay + results above sticky header & nav */
 :root,
@@ -18,4 +17,3 @@
 .instant-search__results-wrapper-filter {
   z-index: var(--elevation-search-results) !important;
 }
-</style>
