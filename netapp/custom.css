@@ -1,0 +1,252 @@
+/* Common fallbacks:
+   --config-body-background-color, --config-card-background-color,
+   --config--main-color-night, --config-card-border-color,
+   --config-anchor-base-color, --config--main-button-base-font-color
+*/
+
+/* Global grouped backgrounds and panels */
+.content-helpfulness-sidebar,
+.c-dropdown__content,
+.dropdown,
+.box,
+.tag--pill,
+.control-modal,
+.tooltip--day.tooltip .tooltip__content,
+.event-calendar-icon-container .event__date,
+.event-content-container,
+.event-header-container,
+.event-attendees-container,
+.event-details-container,
+.stats-bar,
+div.Sidebarmodule .public-tags,
+.search-revamp .instant-search-wrapper .smart-summary,
+.search-revamp .instant-search-wrapper .instant-search__source-type-filter .instant-search__filter-tab-button,
+.search-revamp .instant-search-wrapper .smart-summary .sources .source-list .source,
+.twig_page-product-update-overview .tooltip-container .tooltip-message.product-updates_subscribe-btn--message,
+.ask-question-widget__widget,
+.leaderboard-table-container .leaderboard-row,
+.dropdown-selector__header,
+.dropdown-selector__item--first-level,
+.dropdown-selector__item--last-level,
+.dropdown-selector__item--middle-level,
+.dropdown-selector__item-wrapper--expanded,
+.public-tag-container .public-tag-wrapper .public-tag-input-wrapper,
+.product-area-dropdown-options-container,
+.mfp-wrap .mfp-inline-holder .mfp-content,
+.notification-center__panel,
+.mention-user,
+.cke_autocomplete_panel,
+.notification-center__panel__list a.notification-center__item,
+div.popup-component,
+div.popup-component td,
+div.profilepicture.qa-profile-picture,
+div.tooltip-message,
+ul.tabs--navigation > li > a,
+ul.tabs--navigation.qa-tabs-menu,
+ul.dropdown-selector.category-selector,
+.idea-status-dropdown .idea-status-dropdown-options-container,
+.select-idea-status,
+.idea-status-selector-wrapper,
+.idea-status-selected-item,
+.select-product-area,
+.product-area-selector-wrapper,
+.product-area-selected-item,
+table.cke_dialog,
+table.cke_dialog tbody, 
+table.cke_dialog tbody tr,
+table.cke_dialog tbody tr td,
+table.cke_dialog tbody tr td .cke_dialog_body,
+table.cke_dialog_ui_hbox,
+.cke_dialog_body,
+.cke_1 table.cke_dialog .cke_dialog_title,
+.cke_1 table.cke_dialog .cke_dialog_footer, 
+.poll-wrapper {
+  background-color: var(--config-body-background-color, #000) !important;
+}
+
+.algolia-hit-container {
+  background-color: var(--config-body-background-color, #000) !important;
+  border: 1px solid var(--config--main-color-night);
+}
+
+a#cke_740,
+span.cke_menubutton_inner,
+span.ske_menuitem {
+  background-color: #fff !important;
+}
+
+.cke_1 table.cke_dialog .cke_dialog_title,
+.cke_1 table.cke_dialog .cke_dialog_footer  {
+  background-image: none !important;
+}
+
+.cke_autocomplete_panel {
+  border: 1px solid var(--config--main-color-night);
+}
+
+iframe.cke_wysiwyg_frame.cke_reset {
+    border-radius: 0 !important;
+}
+
+/* Card / widget surfaces */
+.event-featured-topics-container,
+.category-list__container,
+.topic-curation-destination__container,
+.list-widget-wrapper,
+.Sidebarmodule .widget-placeholder,
+.ideation_pipeline .pipeline-col-list > *,
+.widget-container--product_area_filter .widget,
+.widget-container--ideation_status_filter .widget,
+.widget-container--event-overview_event_types .widget
+{
+  background-color: var(--config-card-background-color, #15181F) !important;
+  border: 1px solid var(--config-card-border-color, #333) !important;
+  border-radius: 0 !important;
+}
+
+.widget-container .widget--tags .public-tags,
+.editor__collapsed:hover {
+  background-color: var(--config-card-background-color, #15181F) !important;
+}
+
+/* Notification Center + Search */
+.notification-center .notification-center__item:not(.notification-center__item--skeleton):hover,
+li.algolia-search-result:hover,
+li.algolia-search-result:hover span.algolia-hit-item--name,
+.body-wrapper .search-v2 .algolia-search-container.unified-index-enabled a.algolia-search__action--view-ai-summary:hover,
+.body-wrapper .search-v2 .algolia-search-container.unified-index-enabled a.algolia-search__action--view-ai-summary.highlighted,
+.body-wrapper .search-v2 .algolia-search-container.unified-index-enabled a.algolia-search__action--view-ai-summary:hover span.algolia-search__action-link,
+.body-wrapper .search-v2 .algolia-search-container.unified-index-enabled a.algolia-search__action--view-ai-summary.highlighted span.algolia-search__action-link,
+.body-wrapper .search-v2 .algolia-search-container.unified-index-enabled a.algolia-search__action--view-ai-summary:hover span.algolia-search__action-icon,
+.body-wrapper .search-v2 .algolia-search-container.unified-index-enabled a.algolia-search__action--view-ai-summary.highlighted span.algolia-search__action-icon,
+a.algolia-search__action--view-all:hover,
+a.algolia-search__action--view-all.highlighted,
+a.algolia-search__action--view-all:hover span.algolia-search__action-link,
+a.algolia-search__action--view-all.highlighted span.algolia-search__action-link,
+a.algolia-search__action--view-all:hover span.algolia-search__action-icon,
+a.algolia-search__action--view-all.highlighted span.algolia-search__action-icon,
+.body-wrapper .search-v2 .algolia-search-container.unified-index-enabled a.highlighted,
+.body-wrapper .search-v2 .algolia-search-container.unified-index-enabled a.highlighted span.algolia-hit-item--name,
+.body-wrapper .search-v2 .algolia-search-container.unified-index-enabled li.highlighted,
+.body-wrapper .search-v2 .algolia-search-container.unified-index-enabled li.highlighted span.algolia-hit-item--name,
+li.dropdown-selector__item:hover {
+    background-color: var(--config-card-hover-background-color) !important;
+}
+
+/* Text / content color defaults */
+.event-types-list-item__button,
+.search-revamp .instant-search-wrapper .instant-search__topic-type-filter .instant-search__filter-list-item label,
+.search-revamp .instant-search-wrapper .smart-summary .sources .source-list .source .title,
+h5.a-card_info__title.a-card-widget-title,
+div#modal-header-title,
+.topic-wrapper .topic-view-content-wrapper .post__content,
+.post__content p,
+.tabs--nav ul>.tabs__item>a,
+.button-control-new--secondary,
+.public-tag-container .public-tag-list-container .public-tag-list-item {
+  color: var(--config--main-color-night, #fff) !important;
+}
+
+/* Inputs & form controls — keep readable on dark backgrounds */
+.body-wrapper .search-v2 input[type=search].search-box__input,
+.body-wrapper .search-v2 .algolia-search-container.unified-index-enabled .algolia-search__action--view-ai-summary .algolia-search__action-link,
+.body-wrapper .search-v2 .algolia-hit-item--name,
+.body-wrapper .search-v2 .algolia-search__action-link,
+.body-wrapper .search-v2 .algolia-search__action-icon,
+.body-wrapper input[type=search],
+.body-wrapper .search-v2 .no-search-results--title,
+.body-wrapper .search-v2 .no-search-results--text,
+.body-wrapper input[type=text],
+.body-wrapper input[type=password],
+.body-wrapper .search-v2 input[type=search],
+.body-wrapper input[type=text],
+.body-wrapper input[type=password],
+.modal--login form.form.js-ajax-form--login input,
+form.form.js-ajax-form--registration input,
+.cke_dialog_ui_input_text,
+.cke_dialog_ui_input_select,
+.cke_dialog_ui_input_textarea {
+  color: var(--config--main-color-night, #fff) !important;
+  background-color: var(--config-body-background-color, #000) !important;
+  border-color: var(--config-card-border-color, #333) !important;
+}
+
+/* Tabs / active state */
+.tabs--nav ul>.tabs__item>a.is-active {
+  color: #5094ff !important;
+  border-color: #5094ff !important;
+}
+.tabs--nav ul>.tabs__item>a:hover { color: #5094ff !important; }
+
+/* Buttons */
+.button-control-new--secondary,
+.public-tag-container .public-tag-list-item {
+  background-color: var(--config-body-background-color, #000) !important;
+  color: var(--config--main-color-night, #fff);
+}
+button.close-btn.button-control-new.button-control-new--small.button-control-new--text.button-control-new--icon {
+  position: relative;
+  color: var(--config--main-button-base-font-color, #1a1a1a);
+}
+
+.topic-share__socials-list .qa-button-twitter svg path {
+    fill: white !important;
+}
+
+/* Maintenance banner (kept as-is, with text color var) */
+.maintenance-banner-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #6234B8, #E00B36);
+  color: var(--config--main-color-night, #fff);
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  border-radius: 0;
+  margin: 0;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.sitewidth.banner-widget__layout {
+    margin: 0;
+}
+.banner-widget__contents {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Card titles / layout tweaks */
+.topic-list-item-card { margin-bottom: 0 !important; }
+.idea-view .topic-view_footer .thread-meta-item--vote,
+.button-control-new,
+.search-v2 input[type=search].search-box__input,
+.search-revamp .instant-search-wrapper .instant-search__results-wrapper-filter.unified-index,
+.search-revamp .instant-search-wrapper .search-result,
+.control-modal {
+  border-radius: 0;
+}
+
+/* Post table surfaces */
+table {
+  background-color: var(--config-card-background-color, #15181F) !important;
+}
+
+/* Groups / dropdowns / hero */
+.group-detail-info.group-detail-info--information,
+.group-detail-info.group-detail-info--moderation,
+.group-detail-info,
+.thread-list-title.qa-subForum-header,
+.group-details_hero__user-joined.btn.btn--secondary,
+ul.c-dropdown__content.c-dropdown__content-size-S.c-dropdown__content-position-bottom.c-dropdown__content-align-right,
+button.btn.btn--secondary.group-details_hero__user-action-dropdown-btn.groups-v2-styles {
+  background-color: var(--config-body-background-color, #000) !important;
+}
+
+/* Hover/card lift */
+article.featured-topic.quicklink__box.card-widget-wrapper.quicklink-icon:hover,
+article.community-category__card.community-category__card-big-card.card.card-widget-wrapper:hover {
+  transform: translateY(-8px);
+  transition: transform 0.3s ease;
+}
