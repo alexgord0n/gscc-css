@@ -1,4 +1,3 @@
-<script>
 (() => {
   // ----------------------------
   // 1) Scheduled maintenance banner close
@@ -262,4 +261,3 @@
     }
   });
 })();
-</script>
