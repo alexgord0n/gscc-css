@@ -85,7 +85,7 @@ span.ske_menuitem {
 }
 
 .qa-answer-field.reply-flexbox.reply-flexbox--bestanswer p {
-   color: black !important;
+   color: var(--config--main-color-brand-secondary) !important;
 }
 
 iframe.cke_wysiwyg_frame.cke_reset {
