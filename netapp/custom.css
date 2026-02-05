@@ -84,6 +84,10 @@ span.ske_menuitem {
   border: 1px solid var(--config--main-color-night);
 }
 
+.qa-answer-field.reply-flexbox.reply-flexbox--bestanswer p {
+   color: black !important;
+}
+
 iframe.cke_wysiwyg_frame.cke_reset {
     border-radius: 0 !important;
 }
