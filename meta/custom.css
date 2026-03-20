@@ -21,4 +21,10 @@ forum-featured-image {
 .forum-featured-image__content .searchbar-in-hero {
   width: 100%;
   max-width: 500px;
+  margin: 0 auto;
+}
+
+.forum-featured-image__content .searchbar-in-hero form,
+.forum-featured-image__content .searchbar-in-hero input {
+  width: 100%;
 }
