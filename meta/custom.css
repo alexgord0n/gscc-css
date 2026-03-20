@@ -1,0 +1,11 @@
+forum-featured-image {
+  position: relative;
+}
+
+.forum-featured-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
